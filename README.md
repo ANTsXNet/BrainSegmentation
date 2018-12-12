@@ -35,4 +35,4 @@ Total elapsed time: 31.67444 seconds
 
 ## Sample results
 
-![Brain extraction results](Documentation/Images/resultsBrainExtraction.png)
+![Brain extraction results](Documentation/Images/resultsBrainSegmentation.png)
