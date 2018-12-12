@@ -13,12 +13,12 @@ Deep learning app made for T1-weighted MRI brain segmentation using ANTsRNet
 ```
 #
 #  Usage:
-#    Rscript doBrainExtraction.R inputImage inputImageBrainExtractionMask outputImage reorientationTemplate
+#    Rscript doBrainSegmentation.R inputImage inputImageBrainExtractionMask outputImage reorientationTemplate
 #
 #  MacBook Pro 2016 (no GPU)
 #
 
-$ Rscript Scripts/doBrainTissueSegmentation.R Data/Example/1097782_defaced_MPRAGE.nii.gz Data/Example/1097782_defaced_MPRAGEBrainExtractionMask.nii.gz ../output Data/Template/S_template3_resampled2.nii.gz
+$ Rscript Scripts/doBrainTissueSegmentation.R Data/Example/1097782_defaced_MPRAGE.nii.gz Data/Example/1097782_defaced_MPRAGEBrainExtractionMask.nii.gz output Data/Template/S_template3_resampled2.nii.gz
 
 Reading reorientation template Data/Template/S_template3_resampled2.nii.gz  (elapsed time: 0.146404 seconds)
 Using TensorFlow backend.
