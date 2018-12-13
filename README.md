@@ -20,17 +20,22 @@ Deep learning app made for T1-weighted MRI brain segmentation using ANTsRNet
 
 $ Rscript Scripts/doBrainTissueSegmentation.R Data/Example/1097782_defaced_MPRAGE.nii.gz Data/Example/1097782_defaced_MPRAGEBrainExtractionMask.nii.gz output Data/Template/S_template3_resampled2.nii.gz
 
-Reading reorientation template Data/Template/S_template3_resampled2.nii.gz  (elapsed time: 0.146404 seconds)
+Reading reorientation template Data/Template/S_template3_resampled2.nii.gz  (elapsed time: 0.143312 seconds)
 Using TensorFlow backend.
-Loading weights file2018-12-11 18:12:13.558871: I tensorflow/core/platform/cpu_feature_guard.cc:140] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
-  (elapsed time: 0.308912 seconds)
-Reading  Data/Example/1097782_defaced_MPRAGE.nii.gz  (elapsed time: 0.404892 seconds)
-Normalizing to template and cropping to mask.  (elapsed time: 0.7775259 seconds)
-Prediction and decoding (elapsed time: 22.09039 seconds)
-Renormalize to native space  (elapsed time: 3.351701 seconds)
-Writing ../output  (elapsed time: 4.786408 seconds)
+Loading weights filetrying URL 'https://ndownloader.figshare.com/files/13812053'
+Content type 'application/octet-stream' length 5669488 bytes (5.4 MB)
+==================================================
+downloaded 5.4 MB
 
-Total elapsed time: 31.67444 seconds
+2018-12-12 16:09:29.346764: I tensorflow/core/platform/cpu_feature_guard.cc:140] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+  (elapsed time: 7.987081 seconds)
+Reading  Data//Example/1097782_defaced_MPRAGE.nii.gz  (elapsed time: 0.425921 seconds)
+Normalizing to template and cropping to mask.  (elapsed time: 1.093345 seconds)
+Prediction and decoding (elapsed time: 29.52414 seconds)
+Renormalize to native space  (elapsed time: 3.744169 seconds)
+Writing output  (elapsed time: 5.434884 seconds)
+
+Total elapsed time: 40.53251 seconds
 ```
 
 ## Sample results
