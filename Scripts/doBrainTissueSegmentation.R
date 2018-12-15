@@ -6,7 +6,7 @@ args <- commandArgs( trailingOnly = TRUE )
 
 if( length( args ) != 4 )
   {
-  helpMessage <- paste0( "Usage:  Rscript doHippoEcSegmentation.R",
+  helpMessage <- paste0( "Usage:  Rscript doBrainTissueSegmentation.R",
     " inputFile inputMaskFile outputFilePrefix reorientationTemplate\n" )
   stop( helpMessage )
   } else {
