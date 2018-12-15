@@ -112,10 +112,19 @@ cat( "  (elapsed time:", elapsedTime, "seconds)\n" )
 
 cat( "Writing", outputFilePrefix )
 startTime <- Sys.time()
-for( i in seq_len( numberOfClassificationLabels ) )
+
+probabilityImageFiles <- c()
+for( i in seq_len( numberOfClassificationLabels - 1 ) )
   {
-  antsImageWrite( probabilityImages[[i]], paste0( outputFilePrefix, classes[i], ".nii.gz" ) )
+  probabilityImageFiles[i] <- paste0( outputFilePrefix, classes[i+1], ".nii.gz" )
+  antsImageWrite( probabilityImages[[i+1]], probabilityImageFiles[i] )
   }
+
+probabilityImagesMatrix <- imagesToMatrix( probabilityImageFiles, mask )
+segmentationVector <- apply( probabilityImagesMatrix, FUN = which.max, MARGIN = 2 )
+segmentationImage <- makeImage( mask, segmentationVector )
+antsImageWrite( segmentationImage, paste0( outputFilePrefix, "Segmentation.nii.gz" ) )
+
 endTime <- Sys.time()
 elapsedTime <- endTime - startTime
 cat( "  (elapsed time:", elapsedTime, "seconds)\n" )
