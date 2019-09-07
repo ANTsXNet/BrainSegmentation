@@ -15,7 +15,7 @@ import antspynet
 args = sys.argv
 
 if len(args) != 5:
-    help_message = ("Usage:  python doBrainExtraction.py" +
+    help_message = ("Usage:  python doBrainTissueSegementation.py" +
         " inputFile inputMaskFile outputFilePrefix reorientationTemplate")
     raise AttributeError(help_message)
 else:
