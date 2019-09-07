@@ -8,6 +8,12 @@ Deep learning app made for T1-weighted MRI brain segmentation using ANTsRNet/ANT
 * [ANTsR](https://github.com/ANTsX/ANTsR) installation
 * [ANTsRNet](https://github.com/ANTsX/ANTsRNet) installation
 
+or 
+
+* python3
+* ANTsPy (https://github.com/ANTsX/ANTsPy) installation
+* ANTsPyNet (https://github.com/ANTsX/ANTsPyNet) installation
+
 ## Model training notes
 
 * Training data: IXI, NKI, Kirby, Oasis, ADNI SSTs
