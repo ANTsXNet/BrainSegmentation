@@ -87,7 +87,7 @@ Writing BrainStem
 Writing Cerebellum
   (elapsed time:  0.6296160221099854  seconds)
 Total elapsed time:  14.642551898956299 seconds
-
+```
 ## Sample results
 
 ![Brain extraction results](Documentation/Images/resultsBrainSegmentation.png)
