@@ -1,6 +1,6 @@
 # App:  Brain Segmentation
 
-Deep learning app made for T1-weighted MRI brain segmentation using ANTsRNet
+Deep learning app made for T1-weighted MRI brain segmentation using ANTsRNet/ANTsPyNet
 
 ## Prerequisites
 
@@ -19,7 +19,7 @@ Deep learning app made for T1-weighted MRI brain segmentation using ANTsRNet
 ```
 #
 #  Usage:
-#    Rscript doBrainSegmentation.R inputImage inputImageBrainExtractionMask outputImage reorientationTemplate
+#    Rscript doBrainTissueSegmentation.R inputImage inputImageBrainExtractionMask outputImage reorientationTemplate
 #
 #  MacBook Pro 2016 (no GPU)
 #
@@ -43,6 +43,42 @@ Writing output  (elapsed time: 5.434884 seconds)
 
 Total elapsed time: 40.53251 seconds
 ```
+
+```
+#
+#  Usage:
+#    python doBrainTissueSegmentation.py inputImage inputImageBrainExtractionMask outputImage reorientationTemplate
+#
+#  MacBook Pro 2016 (no GPU)
+#
+
+$ python3 Scripts/doBrainTissueSegmentation.py Data/Example/1097782_defaced_MPRAGE.nii.gz Data/Example 1097782_defaced_MPRAGEBrainExtractionMask.nii.gz output Data/Template/S_template3_resampled2.nii.gz
+  (elapsed time:  0.24991798400878906  seconds)
+Using TensorFlow backend.
+Reading reorientation template Data/Template/S_template3_resampled2.nii.gz
+  (elapsed time:  0.13327789306640625  seconds)
+Loading weights file
+Reading  Data/Example/1097782_defaced_MPRAGE.nii.gz
+  (elapsed time:  0.4373149871826172  seconds)
+Normalizing to template
+  (elapsed time:  0.8624999523162842  seconds)
+Prediction and decoding
+  (elapsed time:  3.952528715133667  seconds)
+Renormalize to native space
+  (elapsed time:  4.055559873580933  seconds)
+Writing Csf
+  (elapsed time:  0.6270971298217773  seconds)
+Writing GrayMatter
+  (elapsed time:  0.6342768669128418  seconds)
+Writing WhiteMatter
+  (elapsed time:  0.6345169544219971  seconds)
+Writing DeepGrayMatter
+  (elapsed time:  0.6133458614349365  seconds)
+Writing BrainStem
+  (elapsed time:  0.6279520988464355  seconds)
+Writing Cerebellum
+  (elapsed time:  0.6296160221099854  seconds)
+Total elapsed time:  14.642551898956299 seconds
 
 ## Sample results
 
