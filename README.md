@@ -20,7 +20,7 @@ or
 * Unet model (see ``Scripts/Training/``).
 * Template-based data augmentation
 
-## Sample prediction usage
+## Sample usage (ANTsRNet)
 
 ```
 #
@@ -49,6 +49,8 @@ Writing output  (elapsed time: 5.434884 seconds)
 
 Total elapsed time: 40.53251 seconds
 ```
+
+## Sample usage (ANTsPyNet)
 
 ```
 #
