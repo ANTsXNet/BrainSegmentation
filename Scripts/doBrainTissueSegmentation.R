@@ -59,6 +59,8 @@ cat( "Reading ", inputFileName )
 startTime <- Sys.time()
 image <- antsImageRead( inputFileName, dimension = 3 )
 mask <- antsImageRead( inputMaskFileName, dimension = 3 )
+mask[mask >= 0.5] <- 1.0
+mask[mask < 0.5] <- 0.0
 endTime <- Sys.time()
 elapsedTime <- endTime - startTime
 cat( "  (elapsed time:", elapsedTime, "seconds)\n" )
